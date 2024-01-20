@@ -4,6 +4,8 @@
   "description": "made by ASN",
   
   "scripts": {
+    "start" : "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "author": "ASN",
