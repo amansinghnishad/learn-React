@@ -23,7 +23,6 @@ const Header = () => {
   );
 };
 
-
 const RestaurantCard = (props) => {
   const { resData } = props;
 
@@ -38,11 +37,11 @@ const RestaurantCard = (props) => {
 
   return (
     <div
-    className="res-card"
-    style={{
-      backgroundColor: '#f0f0f0',
-    }}
-  >
+      className="res-card"
+      style={{
+        backgroundColor: "#f0f0f0",
+      }}
+    >
       <img
         className="res-logo"
         src={
@@ -51,9 +50,9 @@ const RestaurantCard = (props) => {
         }
         alt="Biryani"
       />
-      
+
       <h3>{name}</h3>
-      <h4>{cuisines.join(', ')}</h4>
+      <h4>{cuisines.join(", ")}</h4>
       <h4>{avgRating} stars</h4>
       <h4>{costForTwoString}</h4>
       <h4>{deliveryTime} minutes</h4>
@@ -2105,7 +2104,6 @@ const resList = [
   },
 ];
 
-
 const Body = () => {
   return (
     <div className="body">
@@ -2121,7 +2119,7 @@ const Body = () => {
     </div>
   );
 };
-  
+
 const currYear = new Date().getFullYear();
 
 const Footer = () => {
@@ -2133,7 +2131,6 @@ const Footer = () => {
     </footer>
   );
 };
-
 
 const AppLayout = () => {
   return (
