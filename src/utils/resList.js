@@ -2043,4 +2043,4 @@ const resList = [
   ];
   
 
-  export default mockData;
+  export default resList;

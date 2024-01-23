@@ -22,10 +22,9 @@ const RestaurantCard = (props) => {
       >
         <img
           className="res-logo"
-          src={
-            {CDN_URL , cloudinaryImageId}
-          }
-          alt="Biryani"
+          src={CDN_URL + cloudinaryImageId}
+          
+          
         />
   
         <h3>{name}</h3>

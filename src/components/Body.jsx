@@ -1,5 +1,5 @@
 import RestaurantCard from "./ResturantCard";
-import resList from "../utils/mockData";
+import resList from "../utils/resList";
 
 
 const Body = () => {
