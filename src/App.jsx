@@ -2,23 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import Footer from "./components/Footer";
 
 
-
-
-
-
-const currYear = new Date().getFullYear();
-
-const Footer = () => {
-  return (
-    <footer className="footer">
-      <p>
-        Copyright &copy; {currYear}, Made with 💗 by <strong>ASN</strong>
-      </p>
-    </footer>
-  );
-};
 
 const AppLayout = () => {
   return (
