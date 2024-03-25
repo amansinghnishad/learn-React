@@ -1,9 +1,22 @@
 import RestaurantCard from "./ResturantCard";
 import resList from "../utils/resList";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 
 const Body = () => {
   const [listofResturents, setlistofResturents] = useState(resList);
+
+  useEffect(() => {
+    fetchData();
+  } , []);
+
+  const fetchData = async () => {
+    const data = await fetch ('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.624480699999999&page_type=DESKTOP_WEB_LISTING');
+
+    const json = await data.json();
+    console.log(json);
+    setlistofResturents(json?.data?.cards[0]?.card?.card?.imageGridCards?.info);
+  }
+
 
   return (
     <div className="body">
@@ -28,7 +41,7 @@ const Body = () => {
 
       <div className="res-container">
         {listofResturents.map((restaurant) => (
-          <RestaurantCard key={restaurant.data.id} resData={restaurant} />
+        <RestaurantCard key={restaurant.data.id} resData={restaurant} />   
         ))}
       </div>
     </div>
